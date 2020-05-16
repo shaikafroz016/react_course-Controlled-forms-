@@ -1,0 +1,17 @@
+.footer{
+  background-image:linear-gradient(to right,rgb(238, 197, 197),rgba(106, 181, 185, 0.562)) ;
+  margin:0px auto;
+  padding: 20px;
+}
+.jumbotron {
+  padding:25px;
+  margin:0px auto;
+  background-image:linear-gradient(to right,rgb(238, 197, 197),rgba(106, 181, 185, 0.562)) ;
+  color:floralwhite;
+}
+
+address{
+  font-size:80%;
+  margin:0px;
+  color:#0f0f0f;
+}
