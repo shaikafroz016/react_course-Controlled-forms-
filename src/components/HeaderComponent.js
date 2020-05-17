@@ -35,7 +35,7 @@ export class HeaderComponent extends Component {
       <Nav.Link href="/home">Home</Nav.Link>
       <Nav.Link href="/menu">Menu</Nav.Link>
       <Nav.Link href="/contactus">Contactus</Nav.Link>
-      <Nav.Link href="/about">About us</Nav.Link>
+      <Nav.Link href="/aboutus">About us</Nav.Link>
       <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
         <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
         <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
