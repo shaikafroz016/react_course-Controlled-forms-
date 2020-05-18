@@ -27,8 +27,7 @@ class CommentForm extends Component {
 
     handleSubmit(values) {
         this.toggleModal();
-        console.log('Current State is: ' + JSON.stringify(values));
-        alert('Current State is: ' + JSON.stringify(values));
+        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
     render() {
@@ -89,7 +88,7 @@ class CommentForm extends Component {
     }
 }
 
-function RenderComments({comments,dishId, Newcmnts}) {
+function RenderComments({comments,Newcmnts,addComment, dishId}) {
         if (comments == null) {
             return (<div></div>)
         }
@@ -114,7 +113,7 @@ function RenderComments({comments,dishId, Newcmnts}) {
                 <h4> Comments </h4>
                 <ul className='list-unstyled'>
                     {cmnts}
-                    <CommentForm dishId={dishId} Newcmnts={Newcmnts} />
+                    <CommentForm dishId={dishId} Newcmnts={Newcmnts} addComment={addComment} />
         
                 </ul>
 
@@ -161,7 +160,9 @@ function RenderDish({dish}) {
                     {/* A JSX comment 
                 <iframe width="560" height="315" src={props.dish.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="myframe"></iframe>*/}
                     <RenderDish dish={props.dish} />
-                    <RenderComments comments={props.comments} />
+                    <RenderComments comments={props.comments} 
+                    addComment={props.addComment}
+                    dishId={props.dish.id}/>
                 </div>
             </div>
             
