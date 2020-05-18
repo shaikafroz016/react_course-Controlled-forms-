@@ -3,6 +3,7 @@ export const DISHES =
         {
         id: 0,
         name:'Uthappizza',
+        url:'https://www.youtube.com/embed/lgm3puP3tMA',
         image: '/assets/images/uthappizza.png',
         category: 'mains',
         label:'Hot',
@@ -23,6 +24,7 @@ export const DISHES =
         {
         id: 2,
         name:'Vadonut',
+        url:'https://www.youtube.com/embed/C4pzmjHgqLw',
         image: '/assets/images/vadonut.png',
         category: 'appetizer',
         label:'New',
