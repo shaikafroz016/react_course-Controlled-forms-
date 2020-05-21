@@ -31,7 +31,7 @@ class CommentForm extends Component {
 
     handleSubmit(values) {
         this.toggleModal();
-        this.props.addComment(this.props.dishId, values.rating, values.author, values.comment);
+        this.props.postComment(this.props.dishId, values.rating, values.author, values.comment);
     }
 
     render() {
@@ -92,7 +92,7 @@ class CommentForm extends Component {
     }
 }
 
-function RenderComments({comments,Newcmnts,addComment, dishId}) {
+function RenderComments({comments,Newcmnts,postComment, dishId}) {
         if (comments == null) {
             return (<div></div>)
         }
@@ -117,7 +117,7 @@ function RenderComments({comments,Newcmnts,addComment, dishId}) {
                 <h4> Comments </h4>
                 <ul className='list-unstyled'>
                     {cmnts}
-                    <CommentForm dishId={dishId} Newcmnts={Newcmnts} addComment={addComment} />
+                    <CommentForm dishId={dishId} Newcmnts={Newcmnts} postComment={postComment} />
         
                 </ul>
 
@@ -181,7 +181,7 @@ function RenderDish({dish}) {
                 <iframe width="560" height="315" src={props.dish.url} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="myframe"></iframe>*/}
                     <RenderDish dish={props.dish} />
                     <RenderComments comments={props.comments} 
-                    addComment={props.addComment}
+                    postComment={props.postComment}
                     dishId={props.dish.id}/>
                 </div>
             </div>
